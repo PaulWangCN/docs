@@ -1,0 +1,38 @@
+---
+title: "HTTP 请求"
+icon: "globe"
+---
+
+**节点说明**：`HTTP 请求`节点将您的工作流连接到外指定 `API` 和 `Web` 服务。使用它来获取数据、发送 `webhooks`、上传文件，或与任何接受 `HTTP` 请求的服务集成。
+![](/images/components/http_request_1.png "")
+
+## 鉴权处理
+若请求接口存在鉴权，可以添加鉴权信息通过鉴权。目前支持三种鉴权类型：
+- **基础鉴权**：传入指定的 `API Key` 即可。
+![](/images/components/http_request_2.png "")
+- **Bearer 鉴权**：传入指定的 `API Key` 即可。
+![](/images/components/http_request_3.png "")
+- **自定义鉴权**：添加 `http` 的 `header` 属性，传入指定的 `API Key` 即可。
+![](/images/components/http_request_4.png "")
+
+## 请求头与请求参数
+自定义多组 `header` 请求头、请求参数键值对更准确的访问 `url` 。
+
+## body选择
+目前支持`6`种 `body` 类型：
+- `none`：无类型。
+- `form-data`：简单文本表单类型。
+- `x-www-form-urlencoded`：复杂数据表单类型。
+- `JSON`：`JSON`格式类型。
+- `raw`：文本类型。
+- `binary`：文件类型。
+
+## 超时配置
+`HTTP` 请求具有可配置的超时设置以防止挂起：
+- **连接超**时：建立连接的最大时间（默认值因部署而异）
+- **读取超时**：读取响应数据的最大时间
+- **写入超时**：发送请求数据的最大时间
+强制执行超时以维持工作流性能并防止资源耗尽。
+
+## 重试机制
+`HTTP请求`节点支持重试机制，在启用重试后，可以设定重试次数和重试间隔时间。

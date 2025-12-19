@@ -1,0 +1,23 @@
+---
+title: 模板引擎
+icon: "note-sticky"
+---
+
+**节点说明**：`模板引擎`节点使用 `freemarker` 模板语法将来自多个来源的数据转换和格式化为结构化文本。使用它来组合变量、格式化输出，并为下游节点或最终用户准备数据
+![](/images/components/template_engine_1.png "")
+
+使用双花括号引用工作流变量：`{{ variable_name }}`。您可以使用点号和括号语法访问嵌套对象属性和数组元素。
+```
+{{ user.name }}
+{{ items[0].title }}
+{{ data.metrics.score }}
+```
+
+条件逻辑使用 `if-else` 语句根据数据值显示不同内容：
+```
+{% if user.subscription == 'premium' %}
+欢迎回来，高级会员！您可以访问所有功能。
+{% else %}
+考虑升级到高级会员以获得更多功能。
+{% endif %}
+```

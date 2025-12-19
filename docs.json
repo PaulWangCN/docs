@@ -1,122 +1,212 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
-  "name": "Mint Starter Kit",
+  "name": "清瑶智能",
+  "description": "清奇领航是新一代 AI Agent 开发平台。",
+  "theme": "maple",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#0060FF",
+    "light": "#688FE8",
+    "dark": "#0034FF"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "/logo/favicon.svg",
+  "logo": {
+    "light": "/logo/logo-light.png",
+    "dark": "/logo/logo-dark.png"
+  },
+  "search": {
+    "enabled": false
+  },
   "navigation": {
-    "tabs": [
+    "versions": [
       {
-        "tab": "Guides",
-        "groups": [
+        "version": "Latest",
+        "languages": [
           {
-            "group": "Getting started",
-            "pages": [
-              "index",
-              "quickstart",
-              "development"
-            ]
-          },
-          {
-            "group": "Customization",
-            "pages": [
-              "essentials/settings",
-              "essentials/navigation"
-            ]
-          },
-          {
-            "group": "Writing content",
-            "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
-            ]
-          },
-          {
-            "group": "AI tools",
-            "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
+            "language": "zh",
+            "dropdowns": [
+              {
+                "dropdown": "使用文档",
+                "icon": "book-open",
+                "pages": [
+                  {
+                    "group": " ",
+                    "pages": [
+                      {
+                        "group": "入门",
+                        "expanded": false,
+                        "pages": [
+                          "zh/user-guide/getting-started/introduce",
+                          "zh/user-guide/getting-started/quick-start",
+                          "zh/user-guide/getting-started/core-concept"
+                        ]
+                      },
+                      {
+                        "group": "模型管理",
+                        "expanded": false,
+                        "pages": [
+                          "zh/user-guide/model-manage/model-manage"
+                        ]
+                      },
+                      {
+                        "group": "基础组件",
+                        "expanded": false,
+                        "pages": [
+                          "zh/user-guide/lab/components/base-node",
+                          "zh/user-guide/lab/components/start-node",
+                          "zh/user-guide/lab/components/custom-function",
+                          "zh/user-guide/lab/components/llm",
+                          "zh/user-guide/lab/components/kb-retrieval",
+                          "zh/user-guide/lab/components/ifelse",
+                          "zh/user-guide/lab/components/specify-reply",
+                          "zh/user-guide/lab/components/form-collection",
+                          "zh/user-guide/lab/components/doc-extraction",
+                          "zh/user-guide/lab/components/speech-to-text",
+                          "zh/user-guide/lab/components/text-to-speech",
+                          "zh/user-guide/lab/components/var-assignment",
+                          "zh/user-guide/lab/components/http-request",
+                          "zh/user-guide/lab/components/param-extractor",
+                          "zh/user-guide/lab/components/web-search",
+                          "zh/user-guide/lab/components/question-classifier",
+                          "zh/user-guide/lab/components/iterate",
+                          "zh/user-guide/lab/components/web-crawler",
+                          "zh/user-guide/lab/components/mem-query",
+                          "zh/user-guide/lab/components/mem-retrieval",
+                          "zh/user-guide/lab/components/agent",
+                          "zh/user-guide/lab/components/template-engine",
+                          "zh/user-guide/lab/components/var-aggregator"
+                        ]
+                      },
+                      {
+                        "group": "构建",
+                        "expanded": false,
+                        "pages": [
+                          "zh/user-guide/lab/lab-build"
+                        ]
+                      },
+                      {
+                        "group": "调试",
+                        "expanded": false,
+                        "pages": [
+                          "zh/user-guide/lab/lab-debug"
+                        ]
+                      },
+                      {
+                        "group": "发布",
+                        "expanded": false,
+                        "pages": [
+                          "zh/user-guide/lab/lab-publish"
+                        ]
+                      },
+                      {
+                        "group": "监控",
+                        "expanded": false,
+                        "pages": [
+                          "zh/user-guide/monitor/monitor"
+                        ]
+                      },
+                      {
+                        "group": "知识中心",
+                        "expanded": false,
+                        "pages": [
+                          "zh/user-guide/kb/kb-introduce",
+                          "zh/user-guide/kb/kb-create",
+                          "zh/user-guide/kb/kb-index",
+                          "zh/user-guide/kb/kb-manage",
+                          "zh/user-guide/kb/kb-metadata"
+                        ]
+                      },
+                      {
+                        "group": "MCP广场",
+                        "expanded": false,
+                        "pages": [
+                          "zh/user-guide/mcp/mcp-what",
+                          "zh/user-guide/mcp/mcp-introduce",
+                          "zh/user-guide/mcp/mcp-operate"
+                        ]
+                      },
+                      {
+                        "group": "智能评测",
+                        "expanded": false,
+                        "pages": [
+                          "zh/user-guide/eval/eval-introduce"
+                        ]
+                      },
+                      {
+                        "group": "会话记忆",
+                        "expanded": false,
+                        "pages": [
+                          "zh/user-guide/memory/memory"
+                        ]
+                      },
+                      {
+                        "group": "决策引擎",
+                        "expanded": false,
+                        "pages": [
+                          "zh/user-guide/rule/rule-introduce"
+                        ]
+                      },
+                      {
+                        "group": "工具",
+                        "expanded": false,
+                        "pages": [
+                          "zh/user-guide/tools/tools"
+                        ]
+                      },
+                      {
+                        "group": "教程",
+                        "expanded": false,
+                        "pages": [
+                          "zh/user-guide/demos/ins-chatbot"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "dropdown": "API 文档",
+                "icon": "code",
+                "groups": [
+
+                ]
+              }
             ]
           }
         ]
       },
       {
-        "tab": "API reference",
-        "groups": [
+        "version": "1.0.x (Enterprise)",
+        "languages": [
           {
-            "group": "API documentation",
-            "pages": [
-              "api-reference/introduction"
-            ]
-          },
-          {
-            "group": "Endpoint examples",
-            "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+            "language": "zh",
+            "groups": [
             ]
           }
         ]
       }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
-        }
-      ]
-    }
-  },
-  "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
-  },
-  "navbar": {
-    "links": [
-      {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
-      }
-    ],
-    "primary": {
-      "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
-    }
+    ]
   },
   "contextual": {
     "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
+      "copy"
+    ]
+  },
+  "redirects": [
+  ],
+  "navbar": {
+    "primary": {
+      "type": "button",
+      "label": "Studio",
+      "href": "https://platform.ai.qingyao.link/"
+    }
+  },
+  "integrations": {
+    "ga4": {
+      "measurementId": "G-HHGQ6GKNCE"
+    }
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
     }
   }
 }

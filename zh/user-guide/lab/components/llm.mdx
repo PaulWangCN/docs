@@ -1,0 +1,72 @@
+---
+title: "LLM"
+icon: "brain"
+---
+
+**节点说明**：`LLM` 节点可以将内容传入大模型对话中，将大模型的回答作为结果进行输出。
+
+![](/images/components/llm_1.png "")
+
+## AI 模型的选择
+
+AI 模型可以选择参与对话的模型，目前组件有内置的相关模型。
+
+![](/images/components/llm_2.png "")
+
+也可以通过点击添加模型，手动添加对应的模型。
+
+模型类型目前支持：
+
+- 大语言模型
+
+![](/images/components/llm_3.png "")
+
+不同的模型类型用于处理不同的业务，相同类型的模型对不同场景下的处理能力也各有优劣，请考虑自身的使用场景后合理选择。
+
+## 提示词配置
+
+您的界面根据模型类型自适应。聊天模型使用系统角色（系统用于行为，用户用于输入，助手用于示例），而完成模型使用简单的文本续写。在提示词中使用双花括号引用工作流变量：`{{variable_name}}`。变量在到达模型之前会被实际值替换。
+
+## 结构化输出
+
+启用**变量输出结构化输出**后，大模型会将输出按照指定的 `JSON` 格式进行结构化输出，可以在配置中指定 `JSON` 格式中的字段名称，配置完成后可预览实际输出的 `JSON` 格式输出。
+
+也可以通过 `JSON` 导入的方式，将已存在的结构化配置导入到该配置中。
+
+![](/images/components/llm_4.png "")
+
+```json
+{
+    "type": "object",
+    "properties": {
+        "test_name": {
+            "type": "string",
+            "description": "测试名称",
+            "deprecated": false,
+            "default": "",
+            "examples": ""
+        },
+        "test_value": {
+            "type": "integer",
+            "description": "测试值",
+            "deprecated": false,
+            "default": 0,
+            "examples": 0
+        },
+        "test_options": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "description": "测试选择项",
+            "deprecated": false,
+            "default": "",
+            "examples": ""
+        }
+    },
+    "required": [
+
+    ],
+    "additionalProperties": false
+}
+```
